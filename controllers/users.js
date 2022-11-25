@@ -12,17 +12,26 @@ module.exports = {
   signup,
   login,
   profile,
-  //update,
+  update,
 };
 
-//Update Player
-// function update(req, res) {
-//   User.findByIdAndUpdate(req.params.id, req.body, function (err, userDoc) {
-//     userDoc.save(function (err) {
-//       res.redirect("/");
-//     });
-//   });
-// }
+// Update Player
+async function update(req, res) {
+  try {
+    console.log(req.params.id, "<- req.params.id");
+    console.log(req.body, "<- req.body");
+    await User.findByIdAndUpdate(req.params.id, req.body, function (err, userDoc) {
+      console.log(userDoc, "<- userDoc");
+      userDoc.save(function (err) {
+        res.redirect("/");
+      });
+    });
+  }catch(err){
+    console.log(err, "error is in update controller");
+
+  }
+
+}
 
 //-------------Profile-------------
 async function profile(req, res) {
