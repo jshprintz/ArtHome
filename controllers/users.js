@@ -20,11 +20,12 @@ async function update(req, res) {
   try {
     console.log(req.params.id, "<- req.params.id");
     console.log(req.body, "<- req.body");
+
     await User.findByIdAndUpdate(req.params.id, req.body, function (err, userDoc) {
       console.log(userDoc, "<- userDoc");
-      userDoc.save(function (err) {
-        res.redirect("/");
-      });
+      // userDoc.save(function (err) {
+      //   res.redirect("/");
+      // });
     });
   }catch(err){
     console.log(err, "error is in update controller");

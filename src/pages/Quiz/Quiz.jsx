@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import AlertBar from "../../components/AlertBar/AlertBar";
@@ -299,6 +300,7 @@ export default function Quiz({
   avatarDisp,
   handleProfile,
 }) {
+  const navigate = useNavigate()
   const headerIntro = "Already know what you want?";
   const headerLinkDisp = "Click Here to schedule a FREE phone consultation!";
   const headerLinkSrc = "/";
@@ -353,6 +355,9 @@ export default function Quiz({
     ];
 
     answersTallied.sort(compare);
+
+
+    // NEED TO SEND THE QUIZ GRADE TO THE CONROLLER LOGIC
 
     if (answersTallied[0].type === "A") {
       loggedUser.quizGrade = "Coastal Chic will make you feel right at home.";
