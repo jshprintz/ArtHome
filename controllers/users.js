@@ -55,8 +55,6 @@ async function profile(req, res) {
 
 //-------------Signup-------------
 async function signup(req, res) {
-  console.log(req.body, " req.body in signup", req.file);
-
   if (!req.file) return res.status(400).json({ error: "Please submit Photo!" });
 
   const key = `collectionsnowglobe/${uuidv4()}-${req.file.originalname}`;
@@ -105,7 +103,6 @@ async function signup(req, res) {
 async function login(req, res) {
   try {
     const user = await User.findOne({ email: req.body.email });
-    console.log(user, " this user in login");
     if (!user) return res.status(401).json({ err: "bad credentials" });
     // had to update the password from req.body.pw, to req.body password
     user.comparePassword(req.body.password, (err, isMatch) => {

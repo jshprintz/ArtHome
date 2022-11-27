@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import { Image, Card, Row } from "react-bootstrap";
 //import Loading from "../../components/Loading/Loading";
+import userService from "../../utils/userService";
 
 import "./Quiz.css";
 
@@ -308,6 +309,7 @@ export default function Quiz({
   const handleAnswerOptionClick = (isLetter) => {
     userAnswers.push(isLetter);
 
+    // Goes through each question and awaits user input
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
@@ -318,14 +320,9 @@ export default function Quiz({
   };
 
   const handleGrade = () => {
-    let A = 0;
-    let B = 0;
-    let C = 0;
-    let D = 0;
-    let E = 0;
-    let F = 0;
-    let G = 0;
+    let A = 0, B=0, C=0, D=0, E=0, F=0, G=0;
 
+    // Tallies the responses for each answer
     userAnswers.forEach((answer) => {
       answer === "A"
         ? A++
@@ -342,6 +339,7 @@ export default function Quiz({
         : G++;
     });
 
+    // Stores items selected in object
     const answersTallied = [
       { type: "A", value: A },
       { type: "B", value: B },
@@ -352,11 +350,10 @@ export default function Quiz({
       { type: "G", value: G },
     ];
 
+    // Sorts items selected in object
     answersTallied.sort(compare);
 
-
-    // NEED TO SEND THE QUIZ GRADE TO THE CONROLLER LOGIC
-
+    // Stores the grade description 
     if (answersTallied[0].type === "A") {
       loggedUser.quizGrade = "Coastal Chic will make you feel right at home.";
     } else if (answersTallied[0].type === "B") {
@@ -375,8 +372,22 @@ export default function Quiz({
     }
 
     setShowScore(true);
+    sendGrade(loggedUser.quizGrade)
   };
 
+// Send grade to controller function
+  async function sendGrade(grade) {
+    console.log(grade, "<--Here is the grade")
+    //grade.preventDefault();
+    try {
+      await userService.update(grade);
+    } catch (err) {
+      console.log(err, "<--ERROR IN LOGIN PAGE");
+      //setError(err.message);
+    }
+  }
+
+  // Sorting function used in calculating quiz grade
   const compare = (x, y) => {
     if (x.value < y.value) return 1;
     if (x.value > y.value) return -1;
@@ -401,7 +412,7 @@ export default function Quiz({
       <div id="quiz-container">
         <div className="quiz">
           {showScore ? (
-            <div className="score-section">{loggedUser.quizGrade}</div>
+              <div className="score-section">{loggedUser.quizGrade}</div>
           ) : (
             <>
               <div className="question-section">

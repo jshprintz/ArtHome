@@ -2,6 +2,24 @@ import tokenService from "./tokenService";
 
 const BASE_URL = "/api/users/";
 
+function update(grade) {
+  console.log(grade, "<-Utils grade")
+  return (
+    fetch(BASE_URL + "grade", {
+      method: "PUT",
+      body: grade,
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+        return res.json().then((response) => {
+          throw new Error(response.err);
+        });
+      })
+      // Parameter destructuring!
+      .then(({ token }) => tokenService.setToken(token))
+  );
+}
+
 function signup(user) {
   return (
     fetch(BASE_URL + "signup", {
@@ -48,6 +66,7 @@ const exportUserService = {
   logout,
   login,
   getUser,
+  update,
 };
 
 export default exportUserService;
