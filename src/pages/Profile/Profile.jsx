@@ -4,6 +4,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion/dist/framer-motion";
+import { useParams } from "react-router-dom";
 
 
 export default function Profile({
@@ -13,6 +14,12 @@ export default function Profile({
   avatarDisp,
   handleProfile,
 }) {
+    const { username } = useParams();
+    console.log(username, "<-Here is the username")
+
+ 
+    
+  if (loggedUser.username === username)  {
   return (
     <>
       <AlertBar />
@@ -24,7 +31,7 @@ export default function Profile({
         avatarDisp={avatarDisp}
         handleProfile={handleProfile}
       />
-      <div className="landing-page" id="profile-buffer">
+      <div className="landing-page profile-buffer">
         
         <motion.div
             animate={{ x: 150, opacity: 1 }}
@@ -66,4 +73,24 @@ export default function Profile({
       <Footer />
     </>
   );
+} else {
+  return (
+    <>
+      <AlertBar />
+      <NavBar
+        loggedUser={loggedUser}
+        handleLogout={handleLogout}
+        dispSubs={false}
+        handleAvatarClick={handleAvatarClick}
+        avatarDisp={avatarDisp}
+        handleProfile={handleProfile}
+      />
+      <div className="landing-page profile-buffer"></div>  
+      {/* Not displaying for some reason */}
+      <h1>You do not have access to this page</h1> 
+   </>
+   )     
+
+}
+
 }
