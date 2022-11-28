@@ -3,13 +3,21 @@ import tokenService from "./tokenService";
 const BASE_URL = "/api/users/";
 
 function update(grade) {
+  // This is correct.
   console.log(grade, "<-Utils grade")
+  
   return (
     fetch(BASE_URL + "grade", {
       method: "PUT",
-      body: grade,
+      body: JSON.stringify(grade),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer' + tokenService.getToken()
+      }
     })
+    //Response is coming back bad
       .then((res) => {
+        console.log(res, "HERE IS THE RESPONSE")
         if (res.ok) return res.json();
         return res.json().then((response) => {
           throw new Error(response.err);

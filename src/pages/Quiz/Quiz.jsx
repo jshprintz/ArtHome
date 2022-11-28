@@ -377,12 +377,11 @@ export default function Quiz({
 
 // Send grade to controller function
   async function sendGrade(grade) {
-    console.log(grade, "<--Here is the grade")
-    //grade.preventDefault();
     try {
-      await userService.update(grade);
+      const response = await userService.update(grade);
+      console.log(response, "Here is the response")
     } catch (err) {
-      console.log(err, "<--ERROR IN LOGIN PAGE");
+      console.log(err, "<--ERROR IN sendGrade Quiz PAGE");
       //setError(err.message);
     }
   }
