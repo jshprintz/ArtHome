@@ -5,7 +5,6 @@ const BASE_URL = "/api/users/";
 function update(grade) {
   // This is correct.
   console.log(grade, "<-Utils grade")
-  
   return (
     fetch(BASE_URL + "grade", {
       method: "PUT",
