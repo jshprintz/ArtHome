@@ -15,6 +15,7 @@ function Home({ loggedUser, handleLogout, handleAvatarClick, avatarDisp, handleP
   const headerLinkDisp = "Click Here for your FREE Style Quiz!";
   const headerLinkSrc = "/quiz";
 
+  // Need to start adding the content
   return (
     <div className="landing-page">
       <AlertBar
