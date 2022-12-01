@@ -13,12 +13,16 @@ export default function DesignComp() {
           imgAltOld={"Old kitchen"}
         />
         <DesignCard
-          imgSrc={"https://i.imgur.com/3RsWuJO.png"}
-          imgAlt={"Nook"}
+          imgSrc={"https://i.imgur.com/Wx6TugU.png"}
+          imgSrcOld={"https://i.imgur.com/jI6tsjh.png"}
+          imgAlt={"Myrtle Beach home design living room"}
+          imgAltOld={"Old living room"}
         />
         <DesignCard
-          imgSrc={"https://i.imgur.com/DKypIiQ.png"}
-          imgAlt={"Hallway Table"}
+          imgSrc={"https://i.imgur.com/sGQhLjM.png"}
+          imgSrcOld={"https://i.imgur.com/9wlE5BU.png"}
+          imgAlt={"New modern kitchen"}
+          imgAltOld={"Old kitchen"}
         />
       </div>
     </div>
