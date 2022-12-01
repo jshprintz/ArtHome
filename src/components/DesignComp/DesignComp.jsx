@@ -7,8 +7,10 @@ export default function DesignComp() {
     <div id="design-containor">
       <div id="design-card-containor">
         <DesignCard
-          imgSrc={"https://i.imgur.com/9RkvEsL.png"}
-          imgAlt={"Farmhouse"}
+          imgSrc={"https://i.imgur.com/JW1aUiy.png"}
+          imgSrcOld={"https://i.imgur.com/OHkfaNd.jpg"}
+          imgAlt={"Kitchen with stained cabinets and new countertop"}
+          imgAltOld={"Old kitchen"}
         />
         <DesignCard
           imgSrc={"https://i.imgur.com/3RsWuJO.png"}

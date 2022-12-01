@@ -6,7 +6,7 @@
   width: 350px;
 }
 
-#design-img {
+.design-img {
   height: 350px;
   width: 350px;
   object-fit: cover;
@@ -17,12 +17,11 @@
   position: absolute;
   height: 350px;
   width: 350px;
-  transition: 0.5s ease;
-  background-color: rgb(255, 255, 255);
+  transition: 1s ease;
 }
 
 #design-card:hover #image-overlay {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 #text {
