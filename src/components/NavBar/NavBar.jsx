@@ -32,7 +32,7 @@ function NavBar({
             {dispSubs ? (
               <Nav className="me-auto">
                 <Nav.Link href="#logo-details">Specialities</Nav.Link>
-                <Nav.Link href="#design-details-buffer">Styles</Nav.Link>
+                <Nav.Link href="#design-details-buffer">Before/After</Nav.Link>
                 <Nav.Link href="#story-containor-buffer">Story</Nav.Link>
                 <Nav.Link href="#reviews-containor">Testimonials</Nav.Link>
               </Nav>

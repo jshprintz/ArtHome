@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import Carousel from "../../components/Carousel/Carousel";
 import Bio from "../../components/Bio/Bio";
-import LogoModal from "../../components/LogoModal/LogoModal";
+import IconModal from "../../components/IconModal/IconModal";
 import DesignComp from "../../components/DesignComp/DesignComp";
 import ReviewCard from "../../components/ReviewCard/ReviewCard";
 import Footer from "../../components/Footer/Footer";
@@ -34,7 +34,7 @@ function Home({ loggedUser, handleLogout, handleAvatarClick, avatarDisp, handleP
       <div id="header-buffer"></div>
       <Carousel />
       <div id="logo-details"></div>
-      <LogoModal />
+      <IconModal />
       <div id="design-details-buffer"></div>
       <div id="designs-details"></div>
       <DesignComp />
