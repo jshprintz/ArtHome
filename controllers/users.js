@@ -17,10 +17,19 @@ module.exports = {
 
 // Update Player
 async function update(req, res) {
-  try {
-    console.log(req.params.id, "<- req.params.id");
-    console.log(req.body, "<- req.body");
 
+  // FINALLY GOT HERE!!!!
+
+  try {
+    // req.params.id is coming up undefined.
+    console.log(req.params.id, "<- req.params.id");
+    // req.body is coming up as a JSON object
+    console.log(req.body, "<- req.body");
+    // req.user is coming up null
+    console.log(req.user, "here is the user")
+
+
+    // Needs to find the user without req.params.id.
     await User.findByIdAndUpdate(req.params.id, req.body, function (err, userDoc) {
       console.log(userDoc, "<- userDoc");
       // userDoc.save(function (err) {

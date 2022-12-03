@@ -5,7 +5,10 @@ const BASE_URL = "/api/users/";
 function update(grade) {
   // This is correct.
   console.log(grade, "<-Utils grade")
+  console.log(JSON.stringify(grade), "Grade stringify")
+
   return (
+    //There is something that's wrong with this fetch request
     fetch(BASE_URL + "grade", {
       method: "PUT",
       body: JSON.stringify(grade),
