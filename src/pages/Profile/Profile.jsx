@@ -17,8 +17,6 @@ export default function Profile({
     const { username } = useParams();
     console.log(username, "<-Here is the username")
 
- 
-    
   if (loggedUser.username === username)  {
   return (
     <>
