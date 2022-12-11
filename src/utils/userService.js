@@ -3,10 +3,10 @@ import tokenService from "./tokenService";
 const BASE_URL = "/api/users/";
 
 function update(grade) {
-  // This is correct.
-  console.log(grade, "<-Utils grade")
-  console.log(JSON.stringify(grade), "Grade stringify")
 
+  const user = tokenService.getUserFromToken()
+  console.log(user)
+  
   return (
     //There is something that's wrong with this fetch request
     fetch(BASE_URL + "grade", {
@@ -14,7 +14,8 @@ function update(grade) {
       body: JSON.stringify(grade),
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer' + tokenService.getToken()
+        Authorization: 'Bearer' + tokenService.getToken(),
+        user: JSON.stringify(tokenService.getUserFromToken())
       }
     })
     //Response is coming back bad

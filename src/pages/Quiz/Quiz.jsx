@@ -379,7 +379,6 @@ export default function Quiz({
   async function sendGrade(grade) {
     // Grade is getting sent correctly but it's coming back an error
     const JSONgrade = { "quizGrade": grade}
-    console.log(JSONgrade, "here")
     try {
       const response = await userService.update(JSONgrade);
       console.log(response, "Here is the response")
