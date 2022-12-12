@@ -19,6 +19,7 @@ module.exports = {
 async function update(req, res) {
   try {
     // req.headers.user is sending all the user information. We jsut need the id.
+    // for some reason this is coming up undefined.
     console.log(req.headers.user);
     // req.body is correct
     console.log(req.body, "<- req.body");
