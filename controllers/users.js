@@ -19,10 +19,22 @@ module.exports = {
 async function update(req, res) {
   try {
     const user = JSON.parse(req.headers.user);
+    console.log(req.body, "req.body")
+    console.log(user._id, " user id")
+
     await User.findByIdAndUpdate(user._id, req.body, function (err, userDoc) {
-      userDoc.save(function (err) {
-        res.redirect("/")
-      });
+      if (err) {
+        console.log(err)
+      } else {
+        console.log("Updated userDoc: ", userDoc)
+        userDoc.save(function (err) {
+          if (err) {
+            console.log(err)
+          } else {
+            console.log("SAVED userDoc: ", userDoc)
+          }
+        });
+      }
     }).clone().catch(function(err){ console.log(err)});
   }catch(err){
     console.log(err, "error is in update controller");
