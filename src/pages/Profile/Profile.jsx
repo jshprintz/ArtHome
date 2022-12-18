@@ -5,7 +5,7 @@ import AlertBar from "../../components/AlertBar/AlertBar";
 import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion/dist/framer-motion";
 import { useParams } from "react-router-dom";
-
+import userService from "../../utils/userService";
 
 export default function Profile({
   loggedUser,
@@ -15,7 +15,10 @@ export default function Profile({
   handleProfile,
 }) {
     const { username } = useParams();
-    console.log(username, "<-Here is the username")
+    console.log(loggedUser, " <-HERE IS THE LOGGED USER")
+
+    const trueUser = userService.getUser();
+    console.log(trueUser, " <- here is the true user")
 
   if (loggedUser.username === username)  {
   return (

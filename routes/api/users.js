@@ -8,7 +8,7 @@ router.post("/signup", upload.single("photo"), usersCtrl.signup);
 router.post("/login", usersCtrl.login);
 router.get("/:username", usersCtrl.profile);
 
-router.put("/grade", usersCtrl.update);
+router.put("/:username", usersCtrl.update);
 
 /*---------- Protected Routes ----------*/
 

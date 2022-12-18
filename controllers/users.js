@@ -18,22 +18,15 @@ module.exports = {
 // Update Player
 async function update(req, res) {
   try {
-    // req.headers.user is sending all the user information. We jsut need the id.
-    // for some reason this is coming up undefined.
-    console.log(req.headers.user);
-    // req.body is correct
-    console.log(req.body, "<- req.body");
-    // Needs to find the user without req.params.id.
-    await User.findByIdAndUpdate(req.headers.user._id, req.body, function (err, userDoc) {
-      console.log(userDoc, "<- userDoc");
-      // userDoc.save(function (err) {
-      //   res.redirect("/");
-      // });
-    });
+    const user = JSON.parse(req.headers.user);
+    await User.findByIdAndUpdate(user._id, req.body, function (err, userDoc) {
+      userDoc.save(function (err) {
+        res.redirect("/")
+      });
+    }).clone().catch(function(err){ console.log(err)});
   }catch(err){
-   // console.log(err, "error is in update controller");
+    console.log(err, "error is in update controller");
   }
-
 }
 
 //-------------Profile-------------

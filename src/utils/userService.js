@@ -4,12 +4,12 @@ const BASE_URL = "/api/users/";
 
 function update(grade) {
 
-  const user = tokenService.getUserFromToken()
+  const user = getUser();
   console.log(user)
   
   return (
     //There is something that's wrong with this fetch request
-    fetch(BASE_URL + "grade", {
+    fetch(BASE_URL + `${user.username}`, {
       method: "PUT",
       body: JSON.stringify(grade),
       headers: {
@@ -20,7 +20,7 @@ function update(grade) {
     })
     //Response is coming back bad
       .then((res) => {
-        console.log(res, "HERE IS THE RESPONSE")
+        console.log(res.ok," <- is it okay?")
         if (res.ok) return res.json();
         return res.json().then((response) => {
           throw new Error(response.err);
