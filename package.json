@@ -2,7 +2,6 @@
   "name": "art-home",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jshprintz.github.io/arthome",
   "dependencies": {
     "aws-sdk": "^2.1219.0",
     "bcrypt": "^5.0.1",
