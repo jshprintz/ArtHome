@@ -7,10 +7,7 @@ export default function Footer() {
     <NavBar>
     <div id="footer-container">
       <img src="https://i.imgur.com/UicUhqA.png" alt="logo" id="footer-logo" />
-      <div id="footer-text-container">
-        <p>Privacy Policy</p>
-        <p>Careers</p>
-      </div>
+      <div id="footer-text-container" />
       <p>Copyright {new Date().getFullYear()} </p>
     </div>
     </NavBar>
