@@ -2,7 +2,7 @@ import React from "react";
 import Image from "react-bootstrap/Image";
 import "./Bio.css";
 
-function Bio() {
+function BIo() {
   return (
     <div id="container">
       <div id="profile-pic-container">
@@ -42,4 +42,4 @@ function Bio() {
   );
 }
 
-export default Bio;
+export default BIo;
