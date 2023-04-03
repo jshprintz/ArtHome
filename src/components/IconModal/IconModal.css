@@ -1,7 +1,7 @@
 #logo-container {
   margin-top: 10vh;
   height: 100px;
-  background-color: rgb(253, 231, 204);
+  background-color: rgb(248, 235, 212);
   border: 2px solid #c2abaf;
   display: flex;
   justify-content: space-evenly;
@@ -13,5 +13,5 @@
 
 .icon-btn {
   border: 0px;
-  background-color: rgb(253, 231, 204);
+  background-color: rgb(248, 235, 212);
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
-import AlertBar from "../../components/AlertBar/AlertBar";
 import Carousel from "../../components/Carousel/Carousel";
 import Bio from "../../components/Bio/Bio";
 import IconModal from "../../components/IconModal/IconModal";
@@ -10,27 +9,11 @@ import Footer from "../../components/Footer/Footer";
 
 import "./Home.css";
 
-function Home({ loggedUser, handleLogout, handleAvatarClick, avatarDisp, handleProfile }) {
-  const headerIntro = "Find out your style TODAY!";
-  const headerLinkDisp = "Click Here for your FREE Style Quiz!";
-  const headerLinkSrc = "/quiz";
+function Home() {
 
-  // Need to start adding the content
   return (
     <div className="landing-page">
-      <AlertBar
-        headerIntro={headerIntro}
-        headerLinkDisp={headerLinkDisp}
-        headerLinkSrc={headerLinkSrc}
-      />
-      <NavBar
-        loggedUser={loggedUser}
-        handleLogout={handleLogout}
-        handleProfile={handleProfile}
-        dispSubs={true}
-        handleAvatarClick={handleAvatarClick}
-        avatarDisp={avatarDisp}
-      />
+      <NavBar />
       <div id="header-buffer"></div>
       <Carousel />
       <div id="logo-details"></div>
