@@ -1,0 +1,54 @@
+#nav-bar {
+  margin-top: -20px;
+  z-index: 3;
+  top: 70px;
+  left: 0;
+  background-color: rgb(253, 231, 204);
+  border: 2px solid #c2abaf;
+  height: 80px;
+}
+
+.profile-pic {
+    height: 50px;
+}
+
+#logo-nav {
+  width: 150px;
+}
+
+#avatar-menu {
+  background-color: rgb(253, 231, 204);
+  border: 2px solid #c2abaf;
+  border-radius: 10px;
+  height: 125px;
+  width: 125px;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 10px 10px 42px 0px #000000;
+}
+
+#avatar-menu-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+.avatar-menu-btn{
+  background-color: rgb(253, 231, 204);
+  border: 0px;
+  font-size: 14pt;
+}
+
+.avatar-menu-btn:hover{
+  color: #c2abaf;
+}
+
+@media only screen and (max-width: 450px) {
+  #nav-bar {
+    top: 100px;
+  }
+}

@@ -1,0 +1,46 @@
+.landing-page {
+  background-color: #f4ebdb;
+  min-height: 100vh;
+}
+
+#story {
+  background-color: rgb(253, 231, 204);
+  border: 2px solid #c2abaf;
+  height: 400px;
+  width: 80%;
+  border-radius: 25px;
+  text-align: left;
+}
+
+#story-containor,
+#reviews-containor {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#home,
+#design-details-buffer,
+#logo-details {
+  height: 70px;
+}
+
+#story-containor-buffer {
+  height: 150px;
+}
+
+#footer-buffer,
+#header-buffer {
+  height: 10vh;
+}
+
+@media only screen and (max-width: 1050px) {
+  #story-containor-buffer {
+    height: 0px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #story-containor-buffer {
+    height: 500px;
+  }
+}
