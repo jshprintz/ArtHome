@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from 'styled-components/macro';
 import headerLogo from "./Assets/Images/HeaderLogo.png";
+import {BsInstagram, BsFacebook} from "react-icons/bs";
+import {HiOutlineMail} from "react-icons/hi";
 
 import "./NavBar.css";
 
@@ -18,7 +20,11 @@ const NavBar = () => {
         </LeftContent>
       </LeftSide>
       <RightSide>
-        Hello World
+        <RightContent>
+          <HeaderLink href="https://arthomelv.com/"><BsInstagram size={30}/></HeaderLink>
+          <HeaderLink href="https://www.facebook.com/artandhomelv"><BsFacebook size={30}/></HeaderLink>
+          <HeaderLink href="https://www.honeybook.com/widget/art_home_lv_238447/cf_id/6377d02f1aaa730ed3bc8ee4"><HiOutlineMail size={30}/></HeaderLink>
+        </RightContent>
       </RightSide>
 
     </Container>
@@ -56,18 +62,26 @@ const RightSide = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-
-  border: 5px solid blue;
 `;
 
 const Logo = styled.img`
   height: 60px;
   width: 225px;
+  margin-left: 20px;
 `;
 
 const LeftContent = styled.div`
   height: 60px;
   width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+const RightContent = styled.div`
+  height: 60px;
+  width: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
