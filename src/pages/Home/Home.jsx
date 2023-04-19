@@ -21,8 +21,8 @@ function Home() {
       <div id="design-details-buffer"></div>
       <div id="designs-details"></div>
       <DesignComp />
-      <div id="story-containor-buffer"></div>
-      <div id="story-containor">
+      <div id="story-container-buffer"></div>
+      <div id="story-container">
         <div id="story">
           <Bio />
         </div>

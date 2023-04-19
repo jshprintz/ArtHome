@@ -12,8 +12,8 @@
   text-align: left;
 }
 
-#story-containor,
-#reviews-containor {
+#story-container,
+#reviews-container {
   display: flex;
   justify-content: space-evenly;
 }
