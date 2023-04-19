@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 import headerLogo from "./Assets/Images/HeaderLogo.png";
 import {BsInstagram, BsFacebook} from "react-icons/bs";
 import {HiOutlineMail} from "react-icons/hi";
+import {GiHamburgerMenu} from "react-icons/gi";
 
 import "./NavBar.css";
 
@@ -24,6 +25,9 @@ const NavBar = () => {
           <HeaderLink href="https://arthomelv.com/"><BsInstagram size={30}/></HeaderLink>
           <HeaderLink href="https://www.facebook.com/artandhomelv"><BsFacebook size={30}/></HeaderLink>
           <HeaderLink href="https://www.honeybook.com/widget/art_home_lv_238447/cf_id/6377d02f1aaa730ed3bc8ee4"><HiOutlineMail size={30}/></HeaderLink>
+          <MenuContainer>
+            <GiHamburgerMenu size={30}/>
+          </MenuContainer>
         </RightContent>
       </RightSide>
 
@@ -56,7 +60,7 @@ const LeftSide = styled.div`
 `;
 
 const RightSide = styled.div`
-  width: 25%;
+  width: 300px;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -65,27 +69,32 @@ const RightSide = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 60px;
+  height: 50px;
   width: 225px;
   margin-left: 20px;
 `;
 
 const LeftContent = styled.div`
   height: 60px;
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+
+    /* Show only on big screens */
+    @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const RightContent = styled.div`
   height: 60px;
-  width: 60%;
+  width: 150px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
 
 const HeaderLink = styled.a`
@@ -93,11 +102,28 @@ const HeaderLink = styled.a`
   color: black;
   text-decoration: none;
   font-size: 14pt;
+  padding: 10px;
 
   &:hover {
     color: #c2abaf;
   };
 `;
+
+const MenuContainer = styled.div`
+  cursor: pointer;
+  display: none; 
+  padding: 10px;
+  margin-right: 50px;
+  
+  /* Show only on small screens */
+  @media (max-width: 1024px) {
+    display: block;
+  }
+
+  &:hover {
+    color: #c2abaf;
+  };
+`
 
 
 
