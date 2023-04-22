@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import styled from "styled-components/macro";
 import headerLogo from "./Assets/Images/HeaderLogo.png";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
@@ -8,6 +8,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import "./NavBar.css";
 
 const NavBar = () => {
+  const [isRotated, setIsRotated] = useState(false);
+
+  const handleRotate = () => {
+    setIsRotated(!isRotated)
+  }
+
+
   return (
     <Container>
       <LeftSide>
@@ -30,7 +37,7 @@ const NavBar = () => {
           <HeaderLink href="https://www.honeybook.com/widget/art_home_lv_238447/cf_id/6377d02f1aaa730ed3bc8ee4">
             <HiOutlineMail size={30} />
           </HeaderLink>
-          <MenuContainer>
+          <MenuContainer rotate={isRotated} onClick={handleRotate}>
             <GiHamburgerMenu size={30} />
           </MenuContainer>
         </RightContent>
@@ -132,6 +139,9 @@ const MenuContainer = styled.div`
   padding: 10px;
   margin-right: 50px;
 
+  transform: rotate(${(p) => p.rotate ? "90deg" : "0deg"});
+  transition: transform .5s ease-in-out;
+
   /* Show only on small screens */
   @media (max-width: 1024px) {
     display: block;
@@ -140,6 +150,7 @@ const MenuContainer = styled.div`
   &:hover {
     color: #c2abaf;
   }
+
 `;
 
 export default NavBar;
