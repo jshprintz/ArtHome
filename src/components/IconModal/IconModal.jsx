@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import styled from "styled-components/macro";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { TbLamp } from "react-icons/tb";
 import { BiPaint } from "react-icons/bi";
-import "./IconModal.css";
+
+// ----------------------------------------------------------------
+// TODO: Remove the bootstrap modals and replace with styled components
+// ----------------------------------------------------------------
 
 export default function LogoIcon() {
   const [showTech, setShowTech] = useState(false);
@@ -17,24 +21,19 @@ export default function LogoIcon() {
 
   return (
     <>
-      <div id="logo-container">
-        <button href="#" className="icon-btn">
-          <MdOutlineDesignServices
-            size={60}
-            className="icons"
-            onClick={handleTech}
-          />
-        </button>
-        <button href="#" className="icon-btn">
-          <BiPaint size={60} className="icons" onClick={handleArt} />
-        </button>
-        <button href="#" className="icon-btn">
-          <TbLamp size={60} className="icons" onClick={handleLight} />
-        </button>
-      </div>
+      <LogoContainer>
+        <IconBtn>
+          <MdOutlineDesignServices size={60} onClick={handleTech} />
+        </IconBtn>
+        <IconBtn>
+          <BiPaint size={60} onClick={handleArt} />
+        </IconBtn>
+        <IconBtn>
+          <TbLamp size={60} onClick={handleLight} />
+        </IconBtn>
+      </LogoContainer>
 
       {/* Modal for Tech */}
-
       <Modal show={showTech} onHide={handleTech}>
         <Modal.Header closeButton>
           <Modal.Title>Technical</Modal.Title>
@@ -62,11 +61,6 @@ export default function LogoIcon() {
           concept to the final installation, I am committed to delivering
           exceptional results that exceed my clients' expectations.
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleTech}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
 
       {/* Modal for Art */}
@@ -155,3 +149,22 @@ export default function LogoIcon() {
     </>
   );
 }
+
+const LogoContainer = styled.div`
+  margin-top: 10vh;
+  height: 100px;
+  background-color: rgb(248, 235, 212);
+  border: 2px solid #c2abaf;
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+const IconBtn = styled.button`
+  cursor: pointer;
+  border: 0px;
+  background-color: rgb(248, 235, 212);
+
+  &:hover {
+    color: #c2abaf;
+  }
+`;
