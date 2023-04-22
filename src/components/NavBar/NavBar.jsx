@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components/macro";
 import headerLogo from "./Assets/Images/HeaderLogo.png";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
@@ -11,9 +11,8 @@ const NavBar = () => {
   const [isRotated, setIsRotated] = useState(false);
 
   const handleRotate = () => {
-    setIsRotated(!isRotated)
-  }
-
+    setIsRotated(!isRotated);
+  };
 
   return (
     <Container>
@@ -40,6 +39,17 @@ const NavBar = () => {
           <MenuContainer rotate={isRotated} onClick={handleRotate}>
             <GiHamburgerMenu size={30} />
           </MenuContainer>
+
+          {isRotated && (
+            <MenuContent rotate={isRotated}>
+              <HeaderLink href="#logo-details">Specialties</HeaderLink>
+              <HeaderLink href="#design-details-buffer">
+                Before/After
+              </HeaderLink>
+              <HeaderLink href="#story-container-buffer">Story</HeaderLink>
+              <HeaderLink href="#reviews-container">Testimonials</HeaderLink>
+            </MenuContent>
+          )}
         </RightContent>
       </RightSide>
     </Container>
@@ -60,9 +70,9 @@ const Container = styled.div`
   background-color: rgb(248, 235, 212);
   z-index: 3;
 
-    /* Show only on small screens */
-    @media (max-width: 450px) {
-    height: 15%; 
+  /* Show only on small screens */
+  @media (max-width: 450px) {
+    height: 15%;
   } ;
 `;
 
@@ -139,8 +149,8 @@ const MenuContainer = styled.div`
   padding: 10px;
   margin-right: 50px;
 
-  transform: rotate(${(p) => p.rotate ? "90deg" : "0deg"});
-  transition: transform .5s ease-in-out;
+  transform: rotate(${(p) => (p.rotate ? "90deg" : "0deg")});
+  transition: transform 0.5s ease-in-out;
 
   /* Show only on small screens */
   @media (max-width: 1024px) {
@@ -150,7 +160,22 @@ const MenuContainer = styled.div`
   &:hover {
     color: #c2abaf;
   }
+`;
 
+const MenuContent = styled.div`
+  position: fixed;
+  top: 9.75%;
+  right: 0;
+
+  border: 2px solid #c2abaf;
+  border-top: 2px solid rgb(248, 235, 212);
+  background-color: rgb(248, 235, 212);
+
+  display: flex;
+  flex-direction: column;
+
+  height: 200px;
+  width: 150px;
 `;
 
 export default NavBar;
