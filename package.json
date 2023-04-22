@@ -21,7 +21,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.0.0",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "styled-components": "^5.3.9"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.0",

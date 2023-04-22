@@ -4,8 +4,8 @@ import "./DesignComp.css";
 
 export default function DesignComp() {
   return (
-    <div id="design-containor">
-      <div id="design-card-containor">
+    <div id="design-container">
+      <div id="design-card-container">
         <DesignCard
           imgSrc={"https://i.imgur.com/JW1aUiy.png"}
           imgSrcOld={"https://i.imgur.com/OHkfaNd.jpg"}

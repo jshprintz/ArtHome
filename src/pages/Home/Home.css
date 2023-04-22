@@ -12,8 +12,8 @@
   text-align: left;
 }
 
-#story-containor,
-#reviews-containor {
+#story-container,
+#reviews-container {
   display: flex;
   justify-content: space-evenly;
 }
@@ -24,7 +24,7 @@
   height: 70px;
 }
 
-#story-containor-buffer {
+#story-container-buffer {
   height: 150px;
 }
 
@@ -34,13 +34,13 @@
 }
 
 @media only screen and (max-width: 1050px) {
-  #story-containor-buffer {
+  #story-container-buffer {
     height: 0px;
   }
 }
 
 @media only screen and (max-width: 750px) {
-  #story-containor-buffer {
+  #story-container-buffer {
     height: 500px;
   }
 }
