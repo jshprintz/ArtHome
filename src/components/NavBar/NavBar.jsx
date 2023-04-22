@@ -5,8 +5,6 @@ import { BsInstagram, BsFacebook } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import "./NavBar.css";
-
 const NavBar = () => {
   const [isRotated, setIsRotated] = useState(false);
 
@@ -55,6 +53,8 @@ const NavBar = () => {
     </Container>
   );
 };
+
+// ----------------- Styled Components -----------------
 
 const Container = styled.div`
   width: 100%;
@@ -178,4 +178,6 @@ const MenuContent = styled.div`
   width: 150px;
 `;
 
+// -------------- Export ----------------
 export default NavBar;
+export { NavBar };
