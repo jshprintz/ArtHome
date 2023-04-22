@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <Container>
       <TopContainer>
@@ -40,6 +40,8 @@ export default function Footer() {
     </Container>
   );
 }
+
+// ----------------- Styled Components -----------------
 
 const Container = styled.div`
   height: 100px;
@@ -113,3 +115,9 @@ const Logo = styled.img`
     height: 30px;
   }
 `;
+
+
+// -------------- Export ----------------
+
+export default Footer;
+export { Footer };

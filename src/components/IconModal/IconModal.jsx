@@ -10,7 +10,7 @@ import { BiPaint } from "react-icons/bi";
 // TODO: Remove the bootstrap modals and replace with styled components
 // ----------------------------------------------------------------
 
-export default function LogoIcon() {
+const LogoIcon = () => {
   const [showTech, setShowTech] = useState(false);
   const [showArt, setShowArt] = useState(false);
   const [showLight, setShowLight] = useState(false);
@@ -150,6 +150,8 @@ export default function LogoIcon() {
   );
 }
 
+// ---------------------Styled Components---------------------
+
 const LogoContainer = styled.div`
   margin-top: 10vh;
   height: 100px;
@@ -168,3 +170,8 @@ const IconBtn = styled.button`
     color: #c2abaf;
   }
 `;
+
+// ---------------------Export---------------------
+
+export default LogoIcon;
+export { LogoIcon };

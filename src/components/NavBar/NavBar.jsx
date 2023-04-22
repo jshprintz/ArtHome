@@ -54,6 +54,8 @@ const NavBar = () => {
   );
 };
 
+// ----------------- Styled Components -----------------
+
 const Container = styled.div`
   width: 100%;
   height: 10%;
@@ -176,4 +178,6 @@ const MenuContent = styled.div`
   width: 150px;
 `;
 
+// -------------- Export ----------------
 export default NavBar;
+export { NavBar };
