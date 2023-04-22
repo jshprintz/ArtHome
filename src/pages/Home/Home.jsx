@@ -27,7 +27,7 @@ function Home() {
           <Bio />
         </div>
       </div>
-      <div id="reviews-containor">
+      <div id="reviews-container">
         <ReviewCard />
         <ReviewCard />
         <ReviewCard />
