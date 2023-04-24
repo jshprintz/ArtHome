@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+// ----------------------------------------------------------------
+// TODO: Make Mobile friendly
+// ----------------------------------------------------------------
+
 const About = () => {
   return (
     <Container>

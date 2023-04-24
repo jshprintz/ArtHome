@@ -5,6 +5,10 @@ import { BsInstagram, BsFacebook } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 
+// ----------------------------------------------------------------
+// TODO: Make Mobile friendly
+// ----------------------------------------------------------------
+
 const NavBar = () => {
   const [isRotated, setIsRotated] = useState(false);
 

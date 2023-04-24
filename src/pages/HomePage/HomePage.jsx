@@ -8,7 +8,7 @@ import BeforeAfter from "../../components/BeforeAfter/BeforeAfter";
 import Reviews from "../../components/Reviews/Reviews";
 import Footer from "../../components/Footer/Footer";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <Container>
       <NavBar />
@@ -43,5 +43,5 @@ const HeaderFooterBuffer = styled.div`
 `;
 
 // ------------------ Export ------------------
-export default Home;
-export { Home };
+export default HomePage;
+export { HomePage };
