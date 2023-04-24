@@ -91,6 +91,8 @@ const FooterTextContainer = styled.div`
   align-items: flex-end;
   justify-content: space-between;
   width: 100%;
+  font-family: 'Calligraffitti', cursive;
+font-family: 'Raleway', sans-serif;
 `;
 
 const FooterLink = styled.a`

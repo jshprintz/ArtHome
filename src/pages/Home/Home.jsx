@@ -1,10 +1,10 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import Carousel from "../../components/Carousel/Carousel";
-import Bio from "../../components/Bio/BIo";
+import About from "../../components/About/About";
 import IconModal from "../../components/IconModal/IconModal";
-import DesignComp from "../../components/DesignComp/DesignComp";
-import ReviewCard from "../../components/ReviewCard/ReviewCard";
+import BeforeAfter from "../../components/BeforeAfter/BeforeAfter";
+import Reviews from "../../components/Reviews/Reviews";
 import Footer from "../../components/Footer/Footer";
 
 import "./Home.css";
@@ -20,19 +20,15 @@ function Home() {
       <IconModal />
       <div id="design-details-buffer"></div>
       <div id="designs-details"></div>
-      <DesignComp />
+      <BeforeAfter />
       <div id="story-container-buffer"></div>
       <div id="story-container">
         <div id="story">
-          <Bio />
+          <About />
         </div>
       </div>
       <div id="reviews-container">
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
+        <Reviews />
       </div>
       <div id="footer-buffer"></div>
       <Footer />

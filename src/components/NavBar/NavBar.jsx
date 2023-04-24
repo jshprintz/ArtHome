@@ -137,6 +137,8 @@ const HeaderLink = styled.a`
   text-decoration: none;
   font-size: 14pt;
   padding: 10px;
+  font-family: 'Calligraffitti', cursive;
+  font-family: 'Raleway', sans-serif;
 
   &:hover {
     color: #c2abaf;
