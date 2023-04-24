@@ -1,11 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 import DesignCard from "../DesignCard/DesignCard";
-import "./DesignComp.css";
 
-export default function DesignComp() {
+const BeforeAfter = () => {
   return (
-    <div id="design-container">
-      <div id="design-card-container">
+    <Container>
+      <Content>
         <DesignCard
           imgSrc={"https://i.imgur.com/JW1aUiy.png"}
           imgSrcOld={"https://i.imgur.com/OHkfaNd.jpg"}
@@ -24,7 +24,29 @@ export default function DesignComp() {
           imgAlt={"New modern kitchen"}
           imgAltOld={"Old kitchen"}
         />
-      </div>
-    </div>
+      </Content>
+    </Container>
   );
-}
+};
+
+// -------------------- Styled Components --------------------
+
+const Container = styled.div`
+  height: 40vh;
+  margin-top: 5%;
+`;
+
+const Content = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+
+  @media only screen and (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+// -------------------- Export --------------------
+
+export default BeforeAfter;
+export { BeforeAfter };
