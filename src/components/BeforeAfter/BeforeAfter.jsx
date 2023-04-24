@@ -1,24 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import DesignCard from "../DesignCard/DesignCard";
+import BaCard from "./Components/BaCard";
 
 const BeforeAfter = () => {
   return (
     <Container>
       <Content>
-        <DesignCard
+        <BaCard
           imgSrc={"https://i.imgur.com/JW1aUiy.png"}
           imgSrcOld={"https://i.imgur.com/OHkfaNd.jpg"}
           imgAlt={"Kitchen with stained cabinets and new countertop"}
           imgAltOld={"Old kitchen"}
         />
-        <DesignCard
+        <BaCard
           imgSrc={"https://i.imgur.com/Wx6TugU.png"}
           imgSrcOld={"https://i.imgur.com/jI6tsjh.png"}
           imgAlt={"Myrtle Beach home design living room"}
           imgAltOld={"Old living room"}
         />
-        <DesignCard
+        <BaCard
           imgSrc={"https://i.imgur.com/sGQhLjM.png"}
           imgSrcOld={"https://i.imgur.com/9wlE5BU.png"}
           imgAlt={"New modern kitchen"}
