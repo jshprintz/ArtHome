@@ -1,11 +1,17 @@
+import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import styled from "styled-components";
 import Image from "react-bootstrap/Image";
 import "./Carousel.css";
 
-function CarouselBlock() {
+// ----------------------------------------------------------------
+// TODO: Remove the bootstrap modals and replace with styled components
+// ----------------------------------------------------------------
+
+const CarouselBlock = () => {
   return (
-    <div id="carousel-container">
-      <div id="carousel-settings">
+    <Container>
+      <Content>
         <Carousel fade>
           <Carousel.Item>
             <Image
@@ -48,9 +54,22 @@ function CarouselBlock() {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </div>
-    </div>
+      </Content>
+    </Container>
   );
 }
 
+// -------------------- Styled Components --------------------
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Content = styled.div`
+  width: 100%;
+`;
+
+// -------------------- Export --------------------
 export default CarouselBlock;
+export { CarouselBlock };
