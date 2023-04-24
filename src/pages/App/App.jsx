@@ -5,16 +5,12 @@ import Home from "../Home/Home";
 // Remove this when fully converted to SC
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-
-    return (
-      <Routes>
-        <Route
-          path="/"
-          element={<Home/>}
-          />
-      </Routes>
-    );
-  }
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
+};
 
 export default App;

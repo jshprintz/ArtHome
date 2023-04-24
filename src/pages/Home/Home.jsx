@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import NavBar from "../../components/NavBar/NavBar";
 import Carousel from "../../components/Carousel/Carousel";
 import About from "../../components/About/About";
@@ -7,33 +8,40 @@ import BeforeAfter from "../../components/BeforeAfter/BeforeAfter";
 import Reviews from "../../components/Reviews/Reviews";
 import Footer from "../../components/Footer/Footer";
 
-import "./Home.css";
-
-function Home() {
-
+const Home = () => {
   return (
-    <div className="landing-page">
+    <Container>
       <NavBar />
-      <div id="header-buffer"></div>
+      {/* Hacky, remove this later */}
+      <HeaderFooterBuffer />
       <Carousel />
-      <div id="logo-details"></div>
+      <div id="specialties" style={{ height: "50px" }} />
       <IconModal />
-      <div id="design-details-buffer"></div>
-      <div id="designs-details"></div>
+      <div id="before-after" style={{ height: "50px" }} />
       <BeforeAfter />
-      <div id="story-container-buffer"></div>
-      <div id="story-container">
-        <div id="story">
-          <About />
-        </div>
-      </div>
-      <div id="reviews-container">
-        <Reviews />
-      </div>
-      <div id="footer-buffer"></div>
+      <div id="about" style={{ height: "150px" }} />
+      <About />
+      <div id="reviews" style={{ height: "150px" }} />
+      <Reviews />
+      {/* Hacky, remove this later */}
+      <HeaderFooterBuffer />
       <Footer />
-    </div>
+    </Container>
   );
-}
+};
 
+// ------------------ Styled Components ------------------
+
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: #f4ebdb;
+`;
+
+const HeaderFooterBuffer = styled.div`
+  height: 10vh;
+`;
+
+// ------------------ Export ------------------
 export default Home;
+export { Home };
