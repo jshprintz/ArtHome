@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import Carousel from "../../components/Carousel/Carousel";
-import Bio from "../../components/Bio/BIo";
+import About from "../../components/About/About";
 import IconModal from "../../components/IconModal/IconModal";
 import BeforeAfter from "../../components/BeforeAfter/BeforeAfter";
 import ReviewCard from "../../components/ReviewCard/ReviewCard";
@@ -24,7 +24,7 @@ function Home() {
       <div id="story-container-buffer"></div>
       <div id="story-container">
         <div id="story">
-          <Bio />
+          <About />
         </div>
       </div>
       <div id="reviews-container">
