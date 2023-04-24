@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import BaCard from "./Components/BaCard";
 
+// ----------------------------------------------------------------
+// TODO: Make Mobile friendly
+// ----------------------------------------------------------------
+
 const BeforeAfter = () => {
   return (
     <Container>

@@ -5,6 +5,10 @@ import { BsInstagram, BsFacebook } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 
+// ----------------------------------------------------------------
+// TODO: Make Mobile friendly
+// ----------------------------------------------------------------
+
 const NavBar = () => {
   const [isRotated, setIsRotated] = useState(false);
 
@@ -17,10 +21,10 @@ const NavBar = () => {
       <LeftSide>
         <Logo src={headerLogo}></Logo>
         <LeftContent>
-          <HeaderLink href="#logo-details">Specialties</HeaderLink>
-          <HeaderLink href="#design-details-buffer">Before/After</HeaderLink>
-          <HeaderLink href="#story-container-buffer">Story</HeaderLink>
-          <HeaderLink href="#reviews-container">Testimonials</HeaderLink>
+          <HeaderLink href="#specialties">Specialties</HeaderLink>
+          <HeaderLink href="#before-after">Before/After</HeaderLink>
+          <HeaderLink href="#about">Story</HeaderLink>
+          <HeaderLink href="#reviews">Testimonials</HeaderLink>
         </LeftContent>
       </LeftSide>
       <RightSide>
@@ -73,7 +77,7 @@ const Container = styled.div`
   /* Show only on small screens */
   @media (max-width: 450px) {
     height: 15%;
-  } ;
+  }
 `;
 
 const LeftSide = styled.div`
@@ -90,7 +94,7 @@ const LeftSide = styled.div`
 
     justify-content: flex-start;
     align-items: flex-end;
-  } ;
+  }
 `;
 
 const RightSide = styled.div`
@@ -137,8 +141,8 @@ const HeaderLink = styled.a`
   text-decoration: none;
   font-size: 14pt;
   padding: 10px;
-  font-family: 'Calligraffitti', cursive;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Calligraffitti", cursive;
+  font-family: "Raleway", sans-serif;
 
   &:hover {
     color: #c2abaf;

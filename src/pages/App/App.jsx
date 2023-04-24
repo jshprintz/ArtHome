@@ -1,20 +1,16 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "../Home/Home";
+import HomePage from "../HomePage/HomePage";
 
 // Remove this when fully converted to SC
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-
-    return (
-      <Routes>
-        <Route
-          path="/"
-          element={<Home/>}
-          />
-      </Routes>
-    );
-  }
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
+  );
+};
 
 export default App;
