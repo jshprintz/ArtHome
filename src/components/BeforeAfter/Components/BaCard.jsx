@@ -20,6 +20,7 @@ const Container = styled.div`
   justify-content: center;
   height: 350px;
   width: 350px;
+  
 `;
 
 const BeforeOverlay = styled.div`
@@ -39,6 +40,7 @@ const AfterImg = styled.img`
   width: 350px;
   object-fit: cover;
   border-radius: 15px;
+  border: 2px solid #c2abaf;
 `;
 
 // ------------------ Export ------------------

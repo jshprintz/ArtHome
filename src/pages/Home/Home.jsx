@@ -4,7 +4,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import About from "../../components/About/About";
 import IconModal from "../../components/IconModal/IconModal";
 import BeforeAfter from "../../components/BeforeAfter/BeforeAfter";
-import ReviewCard from "../../components/ReviewCard/ReviewCard";
+import Reviews from "../../components/Reviews/Reviews";
 import Footer from "../../components/Footer/Footer";
 
 import "./Home.css";
@@ -28,11 +28,7 @@ function Home() {
         </div>
       </div>
       <div id="reviews-container">
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
+        <Reviews />
       </div>
       <div id="footer-buffer"></div>
       <Footer />
