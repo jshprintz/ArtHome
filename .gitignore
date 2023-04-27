@@ -1,1 +1,15 @@
 node_modules
+build
+dist
+.idea
+.vscode
+*.log
+*.log.*
+*.log-*
+npm-debug.log*
+
+
+.env
+.env.local
+.env.development.local
+
